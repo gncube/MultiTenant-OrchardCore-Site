@@ -1,0 +1,11 @@
+{
+  "Default": {
+    "VersionId": "4h3gbmknm8am929zhy6tk4j0ds",
+    "State": "Running"
+  },
+  "BlogSite": {
+    "VersionId": "4qjdghkdgqdt7xngvrwvfw7cxf",
+    "RequestUrlPrefix": "blog",
+    "State": "Running"
+  }
+}
