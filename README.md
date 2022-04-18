@@ -21,3 +21,14 @@ dotnet watch run
 
 Server=localhost;Database=MultiTenantSiteDb;Trusted_Connection=True;
 
+#### Install OrchardCore Theme
+
+mkdir Themes
+
+cd themes
+
+dotnet new --list
+
+octheme
+
+Add sln
