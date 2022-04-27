@@ -10,7 +10,7 @@
     var allowChangeEmail = (await SiteService.GetSiteSettingsAsync()).As<ChangeEmailSettings>().AllowChangeEmail;
     var externalAuthenticationSchemes = await SignInManager.GetExternalAuthenticationSchemesAsync();
 }
-<ul class="navbar-nav">
+<ul class="navbar-nav ms-auto">
     @if (User.Identity.IsAuthenticated)
     {
         <li class="nav-item dropdown">

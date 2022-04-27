@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="@Orchard.CultureName()">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@RenderTitleSegments(Site.SiteName, "before")</title>
-    <link type="image/x-icon" rel="shortcut icon" href="~/TheTheme/favicon.ico">
+    <link type="image/x-icon" rel="shortcut icon" href="~/DarkTheme/favicon.ico">
     <script asp-name="bootstrap" version="5" at="Foot"></script>
-    <style asp-name="thetheme-bootstrap-oc" version="1"></style>
+    <style asp-name="darktheme-mdbootstrap-oc" version="1"></style>
     <style asp-name="font-awesome" version="5"></style>
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
     <resources type="Meta" />
     <resources type="HeadLink" />
     <resources type="Stylesheet" />
     <resources type="HeadScript" />
     @await RenderSectionAsync("HeadMeta", required: false)
 </head>
+
 <body dir="@Orchard.CultureDir()">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <shape type="Branding" />
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarColor02"
+                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbar">
-                <menu alias="alias:main-menu" cache-id="main-menu" cache-fixed-duration="00:05:00" cache-tag="alias:main-menu" />
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <menu alias="alias:main-menu" cache-id="main-menu" cache-fixed-duration="00:05:00"
+                    cache-tag="alias:main-menu" />
+
                 <shape type="LoginMenu" />
             </div>
         </div>
     </nav>
+
     @await RenderSectionAsync("Header", required: false)
+
     <main class="container">
         @await RenderSectionAsync("Messages", required: false)
         @await RenderBodyAsync()
@@ -40,6 +50,10 @@
             </div>
         </footer>
     }
+    <!-- MDB -->
+    <script type="text/javascript" src="~/DarkTheme/js/mdb.min.js"></script>
+
     <resources type="FootScript" />
 </body>
+
 </html>

@@ -7,5 +7,10 @@
     "VersionId": "4qjdghkdgqdt7xngvrwvfw7cxf",
     "RequestUrlPrefix": "blog",
     "State": "Running"
+  },
+  "HostSaaS": {
+    "VersionId": "4wvq37d2g0q6kwpb653pys49xy",
+    "RequestUrlPrefix": "etch-saas",
+    "State": "Running"
   }
 }
